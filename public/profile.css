@@ -1,5 +1,5 @@
 body {
-	background-color: #dddcd6; /* Updated main background color */
+	background-color: #5a4d03; /* Updated main background color */
 	font-family: "General Sans", "Roboto", sans-serif;
 	color: #f4f4f4; /* Main text color for better readability */
 	line-height: 1.6;
@@ -10,7 +10,7 @@ h1 {
 }
 
 .mission {
-	background-color: #6c848d; /* Background for the mission statement */
+	background-color: #21bef7; /* Background for the mission statement */
 	color: #f4f4f4; /* Light text color for readability */
 	padding: 20px;
 	border-radius: 8px;
@@ -21,21 +21,25 @@ h1 {
 }
 
 .blog-container {
-	background-color: #dddcd6; /* Container background color */
+	background-color: #f0cc00; /* Container background color */
 	border-radius: 8px;
 	padding: 20px;
 	margin-top: 20px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 4px rgba(8, 8, 8, 0.2);
 }
 
 .blog-header,
 .add-blog-header {
+	
+	font-size: 3em;
+	text-align: center;
 	color: #928178; /* Header text color */
 	margin-bottom: 20px;
 	font-weight: 700;
 }
 
 .blog-posts {
+	color: blue;
 	list-style-type: none;
 	padding: 0;
 }
@@ -48,6 +52,7 @@ h1 {
 	margin-bottom: 20px;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	animation: fadeIn 1s ease;
+	text-align: center;
 }
 
 .blog-post:hover {
@@ -56,7 +61,7 @@ h1 {
 }
 
 .blog-title {
-	font-size: 1.8em;
+	font-size: 3em;
 	color: #80989b; /* Title color */
 	margin-bottom: 0.5em;
 }
@@ -79,7 +84,7 @@ h1 {
 .edit-title,
 .edit-content,
 .form-control {
-	background-color: #333;
+	background-color: rgb(32, 8, 8);
 	border: none;
 	border-bottom: 2px solid #555;
 	color: #fff;
