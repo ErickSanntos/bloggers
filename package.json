@@ -1,0 +1,37 @@
+{
+  "name": "authentication",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "*",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.18.3",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "~1.4.3",
+    "ejs": "~2.5.2",
+    "express": "^4.18.2",
+    "express-session": "^1.15.6",
+    "lodash": "^4.17.20",
+    "method-override": "~2.3.6",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.12.1",
+    "morgan": "^1.9.1",
+    "mpath": ">=0.5.1",
+    "nodemon": "^3.0.1",
+    "passport": "~0.3.2",
+    "passport-facebook": "~2.1.1",
+    "passport-google-oauth": "~1.0.0",
+    "passport-local": "~1.0.0",
+    "passport-twitter": "^0.1.5"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "description": "Savage is a secure messaging application enhanced with user authentication. Users can sign up, log in, post messages, like/dislike, and delete them. It offers a secure platform for users to interact and share messages.",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "keywords": [
+    "blog"
+  ],
+  "author": "erickson",
+  "license": "ISC"
+}

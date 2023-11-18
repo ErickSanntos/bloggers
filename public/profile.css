@@ -1,0 +1,160 @@
+body {
+	background-color: #dddcd6; /* Updated main background color */
+	font-family: "General Sans", "Roboto", sans-serif;
+	color: #f4f4f4; /* Main text color for better readability */
+	line-height: 1.6;
+}
+
+h1 {
+	color: #928178;
+}
+
+.mission {
+	background-color: #6c848d; /* Background for the mission statement */
+	color: #f4f4f4; /* Light text color for readability */
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	font-size: 1.1em;
+	line-height: 1.6;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.blog-container {
+	background-color: #dddcd6; /* Container background color */
+	border-radius: 8px;
+	padding: 20px;
+	margin-top: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.blog-header,
+.add-blog-header {
+	color: #928178; /* Header text color */
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+
+.blog-posts {
+	list-style-type: none;
+	padding: 0;
+}
+
+.blog-post {
+	background-color: #c8d5bb; /* Post background color */
+	color: #333; /* Darker text color for contrast and readability */
+	padding: 15px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	animation: fadeIn 1s ease;
+}
+
+.blog-post:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.blog-title {
+	font-size: 1.8em;
+	color: #80989b; /* Title color */
+	margin-bottom: 0.5em;
+}
+
+.blog-content {
+	font-size: 1em;
+	margin-bottom: 1em;
+}
+
+.edit-form {
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.5s ease;
+}
+
+.blog-post.editing .edit-form {
+	max-height: 500px;
+}
+
+.edit-title,
+.edit-content,
+.form-control {
+	background-color: #333;
+	border: none;
+	border-bottom: 2px solid #555;
+	color: #fff;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 4px;
+}
+
+.edit-title:focus,
+.edit-content:focus,
+.form-control:focus {
+	outline: none;
+	border-bottom-color: #007bff;
+}
+
+.add-blog-form {
+	margin-top: 20px;
+}
+
+.add-blog-form input[type="text"],
+.add-blog-form textarea {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.save-blog,
+.edit-blog,
+.delete-blog,
+.btn {
+	padding: 8px 15px;
+	font-size: 0.9em;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.save-blog:hover,
+.edit-blog:hover,
+.delete-blog:hover,
+.btn:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-info {
+	background-color: #0056b3;
+	color: white;
+}
+
+.btn-danger {
+	background-color: #dc3545;
+	color: white;
+}
+
+.btn-primary {
+	background-color: #007bff;
+	color: white;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.edit-title,
+	.edit-content,
+	.form-control {
+		width: 100%;
+	}
+}

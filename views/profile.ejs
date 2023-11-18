@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>Blog Platform</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1></span> Blog Post </h1>
+    </div>
+
+    <div class="row">
+        <!-- LOCAL INFORMATION -->
+        <!-- <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user && user.local && user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+            </div>
+        </div> -->
+
+        <div class="mission">
+            <p>keep track of your blogs  </p>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>
+
+        <div class="col-sm-12 blog-container">
+            <h3 class="blog-header">Blog Posts</h3>
+            <ul class="blog-posts">
+                <% for(var i = 0; i < blogs.length; i++) { %>
+                    <li class="blog-post" data-id="<%= blogs[i]._id %>">
+                        <div class="blog-post-content">
+                            <span class="blog-title"><%= blogs[i].title %></span>
+                            <p class="blog-content"><%= blogs[i].content %></p>
+                            <p class="blog-last-updated">Last Updated: <%= new Date(blogs[i].lastUpdated).toLocaleDateString() %> at <%= new Date(blogs[i].lastUpdated).toLocaleTimeString() %></p>
+                        </div>
+                        <!-- Hidden Edit Form -->
+                        <div class="edit-form">
+                            <input type="text" class="edit-title" value="<%= blogs[i].title %>">
+                            <textarea class="edit-content"><%= blogs[i].content %></textarea>
+                            <button class="save-blog btn btn-primary">Save</button>
+                        </div>
+                        <div class="blog-post-actions">
+                            <button class="edit-blog btn btn-info">Edit</button>
+                            <button class="delete-blog btn btn-danger">Delete</button>
+                        </div>
+                    </li>
+                <% } %>                
+            </ul>
+        
+            <h2 class="add-blog-header">Add a Blog Post</h2>
+            <% if (user.local.email) { %>
+                <form action="/blogs" method="POST" class="add-blog-form">
+                    <input type="text" placeholder="Title" name="title" class="form-control">
+                    <textarea placeholder="Content" name="content" class="form-control"></textarea>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            <% } %>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
